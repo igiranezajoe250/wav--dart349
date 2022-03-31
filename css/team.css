@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;400&display=swap");
+
+$color-white: #FFFF00;
+$color-off-white: #dfdfdf;
+$color-gray: darken($color-white, 50%);
+$color-black: #000;
+$font-copy: "Montserrat", sans-serif;
+$font-title: "Anton", sans-serif;
+
+$screen-lg: 920px;
+$screen-md: 760px;
+$screen-sm: 580px;
+$screen-xsm: 370px;
+
+@mixin respond($screen-size) {
+  @media only screen and (max-width: $screen-size) {
+    @content;
+  }
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  color: $color-black;
+  background-color: #000000;
+}
+ 
+/* this css is for the nav bar want keep the same menu but changed according to the page same code*/ 
+
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    }
+    body{
+        padding: 0;
+        margin:  0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;
+        min-height: 100vh;
+        background-color: #02040d;
+        opacity: 1;
+        background-image: radial-gradient(#f1f1e6 2px, #02040d 2px);
+        background-size: 300px 300px;
+    }
+    /* this is the css of the top left logo (open finance)*/ 
+    .brand-logo{
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+        color: inherit;
+        text-decoration: none;
+    }
+    .brand-logo-name{
+        margin-left: 1rem;
+        color: #FFFF00;
+    }
+    /* this is the begging of the css for the main nav bar hoover and flexing has the same line as the right corner logo*/ 
+    .main-nav ul{
+        display: flex;
+        text-decoration: none;
+        list-style-type: none;
+        padding: 1rem; 
+        color: aliceblue;
+    }
+    .main-nav a{
+        color: inherit;
+        text-decoration: none;
+        padding: 1rem;
+    }
+    .main-nav a:hover{
+        color:#FFFF00; 
+    }
+    .menubar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    
+    }
+    /* code team css code*/
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+      body {
+        min-height:100vh;
+        font-family: 'Roboto', sans-serif;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      .teams {
+        display:flex;
+        gap:20px;
+        flex-wrap:wrap;
+        align-items:center;
+        justify-content:center;
+      }
+      .card{
+        background:#FFFF00;
+        padding:2rem;
+        display:flex;
+        flex-direction:column;
+       justify-content:space-between;
+        width:250px;
+        height:350px;
+        box-shadow:2px 4px 8px rgba(0,0,0,.2);
+        border-radius:5px;
+        animation:animate 4s linear infinite forwards;
+      }
+      .card:hover{
+        box-shadow:2px 2px 12px 2px rgba(74, 189, 154,.3),2px 2px 12px 2px rgba(71, 131, 204,.3);
+      
+      }
+      .card-top{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+      }
+      
+      .card-top img{
+        width:80px;
+        height:80px;
+        box-shadow:1px 1px 4px 2px rgba(255,255,255,.2);
+        border-radius:50%;
+      }
+      .card-top .name{
+        margin-top:10px;
+        color:rgb(26, 25, 25);
+        text-transform:capitalize;
+      }
+      .card-top .link {
+        color: #838985;
+        cursor:pointer;
+      }
+      .card-top .link::before{
+        content:"@"
+      }
+      .card-top .link:hover{
+        color:red;
+      }
+      .btn{
+        border:2px solid #1D0E2E;
+        padding:.6rem;
+        border-radius:30px;
+        color:rgb(15, 15, 15);
+        background:transparent;
+        cursor:pointer;
+        text-transform:capitalize;
+        transition:.2s easy-in-out;
+      }
+      .btn:hover{
+        background:#efeef0;
+        box-shadow:2px 4px 3px #1D0E2E;
+      }
+      
+      @keyframes animate{
+        0%{
+          border:2px solid rgb(153, 72, 72);
+        }
+        20%{
+          border:2px solid #4783cc;
+        } 
+        40%{
+          border:2px solid #ccaf47;
+        }
+        60%{
+          border:2px solid #ca47cc;
+        }
+        80%{
+          border:2px solid #d4555d;
+        } 
+        100%{
+          border:2px solid #b5a951;
+        }
+      }
